@@ -22,8 +22,8 @@ No stack traces. No merge conflicts. Just thoughts, shipped to production.
 ## Why `console.blog()`?
 
 Because `console.log()` was already taken.
-And honestly, this whole blog is just me logging my thoughts somewhere
-more permanent than a Slack message that disappears in 90 days.
+And honestly, this whole blog is just me logging thoughts before my brain
+garbage-collects them.
 
 ## Fair warning
 
