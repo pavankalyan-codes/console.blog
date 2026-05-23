@@ -1,0 +1,22 @@
+title: console.blog
+description: Notes on engineering, focus, debugging, and getting things shipped.
+author: Pavan
+email:
+url: "https://pavankalyan-codes.github.io"
+baseurl: "/console.blog"
+
+lang: en
+timezone: America/New_York
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
