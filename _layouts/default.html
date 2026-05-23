@@ -7,8 +7,15 @@
       {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
     </title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <script>
+      (function () {
+        var storedTheme = localStorage.getItem("theme");
+        var systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = storedTheme || systemTheme;
+      })();
+    </script>
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
     {% seo title=false %}
   </head>
   <body>
@@ -17,6 +24,9 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/posts/' | relative_url }}">Posts</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme">
+          <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+        </button>
       </nav>
     </header>
 
@@ -25,7 +35,27 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. Built with Jekyll and GitHub Pages.</p>
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. Making the world a better place, one unreproducible bug at a time.</p>
     </footer>
+    <script>
+      (function () {
+        var button = document.querySelector(".theme-toggle");
+        if (!button) return;
+
+        function setTheme(theme) {
+          document.documentElement.dataset.theme = theme;
+          localStorage.setItem("theme", theme);
+          var icon = button.querySelector(".theme-toggle-icon");
+          if (icon) icon.textContent = theme === "dark" ? "☀" : "☾";
+          button.setAttribute("aria-label", "Switch to " + (theme === "dark" ? "light" : "dark") + " mode");
+        }
+
+        setTheme(document.documentElement.dataset.theme || "light");
+
+        button.addEventListener("click", function () {
+          setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+        });
+      })();
+    </script>
   </body>
 </html>
