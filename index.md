@@ -5,7 +5,7 @@ title: Home
 
 <section class="intro">
   <p class="eyebrow">console.blog()</p>
-  <h1>Thoughts, shipped to production.</h1>
+  <h1>I am the one who codes.</h1>
   <p>
     Engineering notes, practical lessons, debugging stories, and the occasional
     strong opinion from Pavan.
