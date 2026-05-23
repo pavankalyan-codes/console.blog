@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "console.log('Hello, World') — but make it a blog"
+title: "Hello, World. Yes, Another Dev Blog."
 date: 2026-05-23
 categories: blog
 ---
