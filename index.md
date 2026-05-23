@@ -8,7 +8,7 @@ title: Home
   <h1>I am the one who codes.</h1>
   <p>
     Engineering notes, practical lessons, debugging stories, and the occasional
-    strong opinion from Pavan.
+    strong opinion from Heisenbug, the one who codes.
   </p>
 </section>
 
