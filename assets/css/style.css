@@ -142,7 +142,7 @@ h3 {
 
 .intro h1 {
   max-width: 760px;
-  font-size: clamp(2.4rem, 8vw, 5.2rem);
+  font-size: clamp(2rem, 6vw, 3.8rem);
   letter-spacing: 0;
 }
 
